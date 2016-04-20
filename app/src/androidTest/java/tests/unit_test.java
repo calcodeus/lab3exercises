@@ -19,25 +19,25 @@ public class unit_test extends ActivityInstrumentationTestCase2<MainActivity> {
     public void test_positives() {
         mainActivity = getActivity();
 
-        int answer = mainActivity.sum(5,8);
+        int answer = mainActivity.subtract(5,8);
 
-        assertEquals(13, answer);
+        assertEquals(-3, answer);
     }
 
     public void test_negatives() {
         mainActivity = getActivity();
 
-        int answer = mainActivity.sum(-5, -8);
+        int answer = mainActivity.subtract(-5, -8);
 
-        assertEquals(-13, answer);
+        assertEquals(3, answer);
     }
 
     public void test_both() {
         mainActivity = getActivity();
 
-        int answer = mainActivity.sum(-5,8);
+        int answer = mainActivity.subtract(-5,8);
 
-        assertEquals(3, answer);
+        assertEquals(-13, answer);
     }
 
 }

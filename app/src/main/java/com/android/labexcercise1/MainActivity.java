@@ -52,20 +52,20 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void getSumValues(View view){
+    public void getSubtractValues(View view){
         EditText text1 = (EditText) findViewById(R.id.editText);
         EditText text2 = (EditText) findViewById(R.id.editText2);
         TextView finsum = (TextView) findViewById(R.id.textView);
         int firstnum = Integer.parseInt(text1.getText().toString());
         int secondnum = Integer.parseInt(text2.getText().toString());
-        String sumString = "" + sum(firstnum,secondnum);
+        String sumString = "" + subtract(firstnum,secondnum);
 
         if (finsum != null) {
             finsum.setText(sumString);
         }
     }
 
-    public int sum(int num1, int num2){
-        return num1+num2;
+    public int subtract(int num1, int num2){
+        return num1-num2;
     }
 }
